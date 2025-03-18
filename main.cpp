@@ -17,7 +17,7 @@ int main() {
     
     try {
     
-        decoder.setIsTrue(false); // Set no test mode
+        decoder.setIsTest(false); // Set no test mode
         
         std::string value = decoder.getUserValue(); // Get user answer (user`s ASCII85 code)
         std::vector<uint8_t> result = decoder.decodeASCII85(value); // Decode user`s ASCII85 code

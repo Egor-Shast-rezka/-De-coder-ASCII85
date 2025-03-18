@@ -13,14 +13,14 @@
 
 
 // =============setIsTrue============= 
-void Decoder::setIsTrue(bool value) {  // Set test mode
+void Decoder::setIsTest(bool value) {  // Set test mode
 
     isTest = value;
 }
 
 
 // =============getIsTrue=============   
-bool Decoder::getIsTrue() const { // Check it is test or no
+bool Decoder::getIsTest() const { // Check it is test or no
 
     return isTest;
 }
@@ -36,7 +36,7 @@ std::string Decoder::getUserValue() const {
     std::getline(std::cin, value);
 
     // Check if in test mode and input is empty
-    if (getIsTrue() && value.empty()) {
+    if (getIsTest() && value.empty()) {
     
         throw std::invalid_argument("Data empty.");
     }
@@ -59,7 +59,7 @@ std::vector<uint8_t> Decoder::decodeASCII85(const std::string& input) const {
     std::vector<uint8_t> decodedData; // Answer
     uint32_t tuple = 0; // Store decoded 32-bit value
     int count = 0; // Number of processed characters in the group
-
+    
     for (size_t i = 0; i < input.size(); ++i) {
     
         char ch = input[i];
@@ -136,9 +136,6 @@ void Decoder::printResultDecoder(std::vector<uint8_t>& result) const {
     std::string decodedMessage(result.begin(), result.end());
     std::cout << "\nDecoded message: " << decodedMessage << "\n";
 }
-
-
-
 
 
 
