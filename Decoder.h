@@ -8,10 +8,8 @@
 
 #include <string>
 #include <iostream>
-#include <array>
 #include <vector>
-#include <cmath>
-
+#include <cstdint>
 
 class Decoder {
 private:
