@@ -24,7 +24,7 @@ make
 To start the programm, run the compiled executable:
 
 ```sh
-./bin/Decoder # Run general programm
+./bin/Start # Run general programm
 ```
 
 ## Tests
