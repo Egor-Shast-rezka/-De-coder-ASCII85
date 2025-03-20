@@ -4,7 +4,7 @@ CXXFLAGS = -Werror -Wpedantic -Wall -std=c++17 -I.
 BUILDDIR = build
 BINDIR = bin
 
-TARGET = $(BINDIR)/Decoder
+TARGET = $(BINDIR)/Start
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(patsubst %.cpp, $(BUILDDIR)/%.o, $(SRCS))
