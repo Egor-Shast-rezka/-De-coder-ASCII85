@@ -11,6 +11,7 @@
 #include <vector>
 #include <limits>
 #include <algorithm>
+#include <cstdint>
 
 
 #ifndef DECODER_H
