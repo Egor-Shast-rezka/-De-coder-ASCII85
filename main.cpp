@@ -22,6 +22,8 @@ int CheckUserAnswer(std::string str, std::vector<int> values) { // Function to d
         std::cout << "Invalid input. Please try again.\n";  // Error message if input is invalid
         std::cin.clear();
         
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        
         std::cout << str;
         std::cin >> answer;
         
