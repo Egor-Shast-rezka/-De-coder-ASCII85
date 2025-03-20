@@ -13,6 +13,10 @@
 #include <cmath>
 
 
+#ifndef DECODER_H
+#define DECODER_H
+
+
 class Decoder {
 private:
     
@@ -24,9 +28,12 @@ public:
     
     bool getIsTrue() const; // Check it is test or no
     
-    std::string getUserValue() const; // Get user answer (user`s ASCII85 code)
+    virtual std::string getUserValue() const; // Get user answer (user`s ASCII85 code)
     
     std::vector<uint8_t> decodeASCII85(const std::string& input) const; // Decode user`s ASCII85 code
     
     void printResultDecoder(std::vector<uint8_t>& result) const; // Print users decoding user`s ASCII85 code
 };
+
+
+#endif
