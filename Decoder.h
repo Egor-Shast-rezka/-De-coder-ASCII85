@@ -8,9 +8,9 @@
 
 #include <string>
 #include <iostream>
-#include <array>
 #include <vector>
-#include <cmath>
+#include <limits>
+#include <algorithm>
 
 
 #ifndef DECODER_H
