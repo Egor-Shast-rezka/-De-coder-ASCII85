@@ -31,6 +31,7 @@ jobs:
       - name: Build and run tests
         run: |
           make test
+          make test_rand
           make clean
 
   build:
