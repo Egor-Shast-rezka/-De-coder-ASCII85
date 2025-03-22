@@ -70,7 +70,7 @@ std::string Coder::codeSTRING(const std::string& input) const {
     int count = 0;
 
     // Process input 4 bytes at a time
-    for (size_t i = 0; i < input.size(); ++i) {
+    for (int i = 0; i < static_cast<int>(input.size()); ++i) {
     
         tuple = (tuple << 8) | (static_cast<char>(input[i])); // Build the tuple from the input
         count++;

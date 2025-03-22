@@ -1,6 +1,7 @@
 /*
     Egor Shastin st129457@student.spbu.ru
-    This is code for testing all classes by using Google Test
+    
+    This is code for unit testing all classes by using Google Test
 */
 
 
