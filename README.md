@@ -36,6 +36,7 @@ This project uses GitHub Actions for automated builds and testing. All tests are
 To run tests locally, you can use the following commands:
 
 ```sh
-make test    # Runs tests for all programm
+make test        # Runs unit tests for all programm
+make test_rand   # Runs random tests for all programm
 ```
 

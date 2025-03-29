@@ -19,15 +19,7 @@
 
 
 class Decoder {
-private:
-    
-    bool isTest;
-    
 public:
-
-    void setIsTrue(bool value); // Set test mode
-    
-    bool getIsTrue() const; // Check it is test or no
     
     virtual std::string getUserValue() const; // Get user answer (user`s ASCII85 code)
     

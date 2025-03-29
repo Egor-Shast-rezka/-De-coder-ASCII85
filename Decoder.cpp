@@ -12,20 +12,6 @@
 #include "Decoder.h"
 
 
-// =============setIsTrue============= 
-void Decoder::setIsTrue(bool value) {  // Set test mode
-
-    isTest = value;
-}
-
-
-// =============getIsTrue=============   
-bool Decoder::getIsTrue() const { // Check it is test or no
-
-    return isTest;
-}
-
-
 // =============getUserValue============= 
 std::string Decoder::getUserValue() const {
 
@@ -34,12 +20,6 @@ std::string Decoder::getUserValue() const {
     // Prompt user for input
     std::cout << "Enter ASCII85 encoded data: ";
     std::getline(std::cin, value);
-
-    // Check if in test mode and input is empty
-    if (getIsTrue() && value.empty()) {
-    
-        throw std::invalid_argument("Data empty.");
-    }
 
     // Loop until valid input is provided
     while (value.empty()) {

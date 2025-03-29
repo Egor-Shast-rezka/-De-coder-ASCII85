@@ -56,7 +56,6 @@ int main() {
             
                 // User chose Decoder
                 Decoder decoder;
-                decoder.setIsTrue(false);  // Set to non-test mode
         
                 std::string value = decoder.getUserValue();  // Get the user's ASCII85 encoded data
                 std::vector<uint8_t> result = decoder.decodeASCII85(value);  // Decode the data
@@ -67,7 +66,6 @@ int main() {
             
                 // User chose Encoder
                 Coder coder;
-                coder.setIsTrue(false);  // Set to non-test mode
         
                 std::string value = coder.getUserValue();  // Get the string to encode
                 std::string result = coder.codeSTRING(value);  // Encode the string into ASCII85

@@ -19,12 +19,6 @@ std::string Coder::getUserValue() const {
     std::cout << "Enter your string: ";
     std::getline(std::cin, value);
 
-    // Check if in test mode and input is empty
-    if (getIsTrue() && value.empty()) {
-    
-        throw std::invalid_argument("Data empty.");
-    }
-
     // Loop until valid input is provided
     while (value.empty()) {
     
@@ -76,11 +70,11 @@ std::string Coder::codeSTRING(const std::string& input) const {
     int count = 0;
 
     // Process input 4 bytes at a time
-    for (size_t i = 0; i < input.size(); ++i) {
+    for (int i = 0; i < static_cast<int>(input.size()); ++i) {
     
         tuple = (tuple << 8) | (static_cast<char>(input[i])); // Build the tuple from the input
         count++;
-
+        
         // Once 4 bytes are collected, encode the tuple
         if (count == 4) {
         
@@ -100,8 +94,15 @@ std::string Coder::codeSTRING(const std::string& input) const {
     return encoded;
 }
 
+
 // =============printResultCoder============= 
 void Coder::printResultCoder(std::string& result) const {
+    
+    // Check if decoded data is empty
+    if (result.empty()) {
+    
+        throw std::invalid_argument("Invalid data. The decoded result cannot be empty.");
+    }
     
     std::cout << "\nEncoded message: " << result << "\n";
 }
